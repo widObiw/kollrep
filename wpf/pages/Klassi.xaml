@@ -1,0 +1,52 @@
+﻿<Page x:Class="wpf.pages.Klassi"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wpf.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="600"
+      Title="Klassi">
+
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="38*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Center" Grid.Column="0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <TextBlock Text="Фамилия: "/>
+                <TextBlock x:Name="tName"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <TextBlock Text="Группа: "/>
+                <TextBlock x:Name="tGroup"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <TextBlock Text="Средний балл: "/>
+                <TextBlock x:Name="tBal"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Grid.Column="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0 0 0 10">
+                <TextBlock Text="ФИО: " Width="80"/>
+                <TextBox x:Name="tbFIO" Width="160"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0 0 0 10">
+                <TextBlock Text="Группа: " Width="80"/>
+                <TextBox x:Name="tbGroup" Width="160"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0 0 0 10">
+                <TextBlock Text="Год: " Width="80"/>
+                <TextBox x:Name="tbYear" Width="160"/>
+            </StackPanel>
+            <Button x:Name="btnGenerat" Content="Генерация" Width="200" Height="30" FontSize="20" Click="btnGenerat_Click"/>
+            <TextBlock x:Name="tNn"/>
+        </StackPanel>
+    </Grid>
+</Page>
